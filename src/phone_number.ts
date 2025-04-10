@@ -1,6 +1,3 @@
-import { PhoneNumberModule } from "./modules/phone_number";
-import { Faker } from "./faker";
-
-const faker = new Faker();
+import { faker } from "./index";
 export const phoneNumber = faker.phoneNumber;
-export type { PhoneNumberModule };
+export type { PhoneNumberModule } from "./modules/phone_number";
