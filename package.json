@@ -45,6 +45,5 @@
     "@types/node": "^18.15.11",
     "tsup": "^8.4.0",
     "typescript": "^5.8.2"
-  },
-  "dependencies": {}
+  }
 }

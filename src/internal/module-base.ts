@@ -1,11 +1,11 @@
-import { Faaker } from "../faaker";
+import { Faker } from "../faker";
 
 export abstract class SimpleModuleBase {
-  constructor(protected readonly faaker: Faaker) {}
+  constructor(protected readonly faker: Faker) {}
 }
 
 export abstract class ModuleBase extends SimpleModuleBase {
-  constructor(protected readonly faaker: Faaker) {
-    super(faaker);
+  constructor(protected readonly faker: Faker) {
+    super(faker);
   }
 }

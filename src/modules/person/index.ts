@@ -1,5 +1,10 @@
-import { gender, last_name } from "../../data";
-import first_name from "../../data/person/first_name";
+import {
+  gender,
+  last_name,
+  job_descriptor,
+  first_name,
+  job_type,
+} from "../../data";
 import prefix from "../../data/person/prefix";
 import { ModuleBase } from "../../internal/module-base";
 
@@ -65,5 +70,13 @@ export class PersonModule extends ModuleBase {
 
   gender(sex?: SexType): string {
     return this.mapTheArray(this.selectDefinition(gender, sex));
+  }
+
+  jobDescriptor(): string {
+    return this.mapTheArray(this.selectDefinition(job_descriptor));
+  }
+
+  jobType(): string {
+    return this.mapTheArray(this.selectDefinition(job_type));
   }
 }

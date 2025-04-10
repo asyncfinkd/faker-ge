@@ -1,5 +1,5 @@
 import { PersonModule } from "./modules/person";
 
-export class Faaker {
+export class Faker {
   readonly person: PersonModule = new PersonModule(this);
 }
