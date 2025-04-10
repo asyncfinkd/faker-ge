@@ -1,6 +1,6 @@
 {
   "name": "faker-ge",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "description": "Generate massive amounts of fake Georgian data",
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
@@ -23,30 +23,6 @@
       "types": "./lib/index.d.ts",
       "import": "./lib/index.mjs",
       "require": "./lib/index.cjs"
-    },
-    "./person": {
-      "types": "./lib/person.d.ts",
-      "import": "./lib/person.mjs",
-      "require": "./lib/person.cjs",
-      "default": "./lib/person.js"
-    },
-    "./personal_number": {
-      "types": "./lib/personal_number.d.ts",
-      "import": "./lib/personal_number.mjs",
-      "require": "./lib/personal_number.cjs",
-      "default": "./lib/personal_number.js"
-    },
-    "./phone_number": {
-      "types": "./lib/phone_number.d.ts",
-      "import": "./lib/phone_number.mjs",
-      "require": "./lib/phone_number.cjs",
-      "default": "./lib/phone_number.js"
-    },
-    "./types": {
-      "types": "./lib/types.d.ts",
-      "import": "./lib/types.mjs",
-      "require": "./lib/types.cjs",
-      "default": "./lib/types.js"
     }
   },
   "keywords": [
@@ -66,20 +42,7 @@
     "typescript": "^5.8.2"
   },
   "typesVersions": {
-    "*": {
-      "person": [
-        "./lib/person.d.ts"
-      ],
-      "personal_number": [
-        "./lib/personal_number.d.ts"
-      ],
-      "phone_number": [
-        "./lib/phone_number.d.ts"
-      ],
-      "types": [
-        "./lib/types.d.ts"
-      ]
-    }
+    "*": {}
   },
   "sideEffects": false
 }

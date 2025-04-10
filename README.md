@@ -42,23 +42,6 @@ const phone = faker.phoneNumber.phone();
 const region = faker.location.getRegion();
 ```
 
-## Individual Modules
-
-You can also import individual modules directly:
-
-```ts
-import { person } from "faker-ge/person";
-import { personalNumber } from "faker-ge/personal_number";
-import { phoneNumber } from "faker-ge/phone_number";
-import { location } from "faker-ge/location";
-
-// Use the modules directly
-const name = person.fullName();
-const pid = personalNumber.pid();
-const phone = phoneNumber.phone();
-const region = location.getRegion();
-```
-
 ## API Reference
 
 ### Person Module
