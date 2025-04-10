@@ -1,4 +1,4 @@
-import { last_name } from "../../data";
+import { gender, last_name } from "../../data";
 import first_name from "../../data/person/first_name";
 import prefix from "../../data/person/prefix";
 import { ModuleBase } from "../../internal/module-base";
@@ -23,40 +23,47 @@ export type PersonEntryDefinition<T> =
     };
 
 export class PersonModule extends ModuleBase {
+  private readonly mapTheArray = <T>(array: T[]): T => {
+    return array[Math.floor(Math.random() * array.length)];
+  };
+
   private readonly selectDefinition = <T>(
     entry: PersonEntryDefinition<T>,
     sex?: SexType | undefined
-  ): T => {
-    const { generic } = entry;
+  ): T[] => {
+    const { generic, male, female } = entry;
 
-    if (sex && entry[sex] && entry[sex].length > 0) {
-      return entry[sex][Math.floor(Math.random() * entry[sex].length)] as T;
+    switch (sex) {
+      case Sex.Male:
+        return male ?? generic;
+      case Sex.Female:
+        return female ?? generic;
+      default:
+        return generic ?? [];
     }
-
-    if (generic && generic.length > 0) {
-      return generic[Math.floor(Math.random() * generic.length)] as T;
-    }
-
-    return {} as T;
   };
 
   firstName(sex?: SexType): string {
-    return this.selectDefinition(first_name, sex);
+    return this.mapTheArray(this.selectDefinition(first_name, sex));
   }
 
   lastName(sex?: SexType): string {
-    return this.selectDefinition(last_name, sex);
+    return this.mapTheArray(this.selectDefinition(last_name, sex));
   }
 
   middleName(sex?: SexType): string {
-    return this.selectDefinition(first_name, sex);
+    return this.mapTheArray(this.selectDefinition(first_name, sex));
   }
 
   fullName(sex?: SexType): string {
     return `${this.firstName(sex)} ${this.lastName(sex)}`;
   }
 
-  prefix(sex?: SexType) {
-    return this.selectDefinition<string>(prefix, sex);
+  prefix(sex?: SexType): string {
+    return this.mapTheArray(this.selectDefinition(prefix, sex));
+  }
+
+  gender(sex?: SexType): string {
+    return this.mapTheArray(this.selectDefinition(gender, sex));
   }
 }
