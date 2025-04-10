@@ -1,0 +1,4 @@
+tests/
+coverage/
+.github/
+vitest.config.ts
