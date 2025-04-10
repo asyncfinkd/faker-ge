@@ -24,6 +24,16 @@
       "import": "./lib/index.js",
       "require": "./lib/index.cjs"
     },
+    "./person": {
+      "types": "./lib/person.d.ts",
+      "import": "./lib/person.js",
+      "require": "./lib/person.cjs"
+    },
+    "./personal_number": {
+      "types": "./lib/personal_number.d.ts",
+      "import": "./lib/personal_number.js",
+      "require": "./lib/personal_number.cjs"
+    },
     "./types": {
       "types": "./lib/types.d.ts",
       "import": "./lib/types.js",
