@@ -1,7 +1,7 @@
 {
-  "name": "js-ubill",
-  "version": "1.0.14",
-  "description": "JavaScript/TypeScript client for the Ubill API",
+  "name": "faker-ge",
+  "version": "0.0.1",
+  "description": "Georgian Faaker",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "publishConfig": {
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/asyncfinkd/js-ubill.git"
+    "url": "git+https://github.com/asyncfinkd/faker-ge.git"
   },
   "scripts": {
     "build": "tsup",
@@ -31,10 +31,10 @@
     }
   },
   "keywords": [
-    "ubill",
-    "sms",
-    "api",
-    "client"
+    "faker",
+    "georgian",
+    "faker-ge",
+    "faker-georgian"
   ],
   "files": [
     "dist"
