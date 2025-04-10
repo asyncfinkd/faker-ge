@@ -1,12 +1,5 @@
 import { ModuleBase } from "../../internal/module-base";
-import { lazyLoad } from "../../utils/data-loader";
-
-const loadData = {
-  city: lazyLoad(() => import("../../data/location/city")),
-  street: lazyLoad(() => import("../../data/location/street")),
-  region: lazyLoad(() => import("../../data/location/region")),
-  zipCodes: lazyLoad(() => import("../../data/location/zip_codes")),
-};
+import { city, street, region, zip_codes } from "../../data/location";
 
 export class LocationModule extends ModuleBase {
   private readonly mapTheArray = <T>(array: T[]): T => {
@@ -17,24 +10,26 @@ export class LocationModule extends ModuleBase {
     return (Math.floor(Math.random() * (max - min + 1)) + min).toString();
   };
 
-  async getRegion(): Promise<string> {
-    const regionData = await loadData.region();
-    return this.mapTheArray(regionData.default.generic);
+  private readonly selectDefinition = (entry: {
+    generic: string[];
+  }): string[] => {
+    return entry.generic;
+  };
+
+  getRegion(): string {
+    return this.mapTheArray(this.selectDefinition(region));
   }
 
-  async getCity(): Promise<string> {
-    const cityData = await loadData.city();
-    return this.mapTheArray(cityData.default.generic);
+  getCity(): string {
+    return this.mapTheArray(this.selectDefinition(city));
   }
 
-  async getStreet(): Promise<string> {
-    const streetData = await loadData.street();
-    return this.mapTheArray(streetData.default.generic);
+  getStreet(): string {
+    return this.mapTheArray(this.selectDefinition(street));
   }
 
-  async getZipCode(): Promise<string> {
-    const zipData = await loadData.zipCodes();
-    return this.mapTheArray(zipData.default.generic);
+  getZipCode(): string {
+    return this.mapTheArray(this.selectDefinition(zip_codes));
   }
 
   getBildingNumber(): string {
