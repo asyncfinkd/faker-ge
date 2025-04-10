@@ -35,4 +35,6 @@ declare class Faker {
     readonly personalNumber: PersonalNumberModule;
 }
 
-export { Faker };
+declare const faker: Faker;
+
+export { Faker, faker };
