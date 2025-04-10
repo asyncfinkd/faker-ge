@@ -1,7 +1,7 @@
 {
   "name": "faker-ge",
-  "version": "0.0.1",
-  "description": "Georgian Faaker",
+  "version": "0.0.2",
+  "description": "Georgian Faker",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "publishConfig": {
