@@ -4,6 +4,8 @@ import {
   job_descriptor,
   first_name,
   job_type,
+  zodiacs,
+  bio,
 } from "../../data";
 import prefix from "../../data/person/prefix";
 import { ModuleBase } from "../../internal/module-base";
@@ -44,7 +46,7 @@ export class PersonModule extends ModuleBase {
       case Sex.Female:
         return female ?? generic;
       default:
-        return generic ?? [];
+        return generic ?? [...male!, ...female!];
     }
   };
 
@@ -52,8 +54,8 @@ export class PersonModule extends ModuleBase {
     return this.mapTheArray(this.selectDefinition(first_name, sex));
   }
 
-  lastName(sex?: SexType): string {
-    return this.mapTheArray(this.selectDefinition(last_name, sex));
+  lastName(): string {
+    return this.mapTheArray(this.selectDefinition(last_name));
   }
 
   middleName(sex?: SexType): string {
@@ -61,7 +63,7 @@ export class PersonModule extends ModuleBase {
   }
 
   fullName(sex?: SexType): string {
-    return `${this.firstName(sex)} ${this.lastName(sex)}`;
+    return `${this.firstName(sex)} ${this.lastName()}`;
   }
 
   prefix(sex?: SexType): string {
@@ -78,5 +80,13 @@ export class PersonModule extends ModuleBase {
 
   jobType(): string {
     return this.mapTheArray(this.selectDefinition(job_type));
+  }
+
+  zodiacSign(): string {
+    return this.mapTheArray(this.selectDefinition(zodiacs));
+  }
+
+  bio(): string {
+    return this.mapTheArray(this.selectDefinition(bio));
   }
 }
