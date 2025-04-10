@@ -70,15 +70,15 @@ The person module allows you to generate realistic Georgian person data.
 faker.person.firstName(); // e.g., "გიორგი" (male) or "ანა" (female)
 
 // Generate a random first name for a specific gender
-faker.person.firstName("Male"); // e.g., "დავით"
-faker.person.firstName("Female"); // e.g., "თამარ"
+faker.person.firstName("male"); // e.g., "დავით"
+faker.person.firstName("female"); // e.g., "თამარ"
 
 // Generate a random last name
 faker.person.lastName(); // e.g., "ბერიძე"
 
 // Generate a full name
 faker.person.fullName(); // e.g., "ნიკა წიკლაური"
-faker.person.fullName("Female"); // e.g., "მარიამ გელაშვილი"
+faker.person.fullName("female"); // e.g., "მარიამ გელაშვილი"
 
 // Generate a job title
 const jobDescriptor = faker.person.jobDescriptor(); // e.g., "უფროსი"
