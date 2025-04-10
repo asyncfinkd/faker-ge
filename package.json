@@ -1,6 +1,6 @@
 {
   "name": "faker-ge",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "description": "Generate massive amounts of fake Georgian data",
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
@@ -22,8 +22,7 @@
     ".": {
       "types": "./lib/index.d.ts",
       "import": "./lib/index.mjs",
-      "require": "./lib/index.cjs",
-      "default": "./lib/index.js"
+      "require": "./lib/index.cjs"
     },
     "./person": {
       "types": "./lib/person.d.ts",
@@ -81,5 +80,6 @@
         "./lib/types.d.ts"
       ]
     }
-  }
+  },
+  "sideEffects": false
 }
