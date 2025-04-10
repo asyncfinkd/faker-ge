@@ -9,7 +9,13 @@ export default defineConfig((flags) => {
   };
 
   return {
-    entry: ["src/index.ts", "src/types.ts"],
+    entry: [
+      "src/index.ts",
+      "src/types.ts",
+      "src/person.ts",
+      "src/personal_number.ts",
+      "src/phone_number.ts",
+    ],
     outDir: "lib",
     ...buildOptions,
   };
