@@ -1,6 +1,6 @@
 {
   "name": "faker-ge",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "Generate massive amounts of fake Georgian data",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -21,28 +21,33 @@
   "exports": {
     ".": {
       "types": "./lib/index.d.ts",
-      "import": "./lib/index.js",
-      "require": "./lib/index.cjs"
+      "import": "./lib/index.mjs",
+      "require": "./lib/index.cjs",
+      "default": "./lib/index.js"
     },
     "./person": {
       "types": "./lib/person.d.ts",
-      "import": "./lib/person.js",
-      "require": "./lib/person.cjs"
+      "import": "./lib/person.mjs",
+      "require": "./lib/person.cjs",
+      "default": "./lib/person.js"
     },
     "./personal_number": {
       "types": "./lib/personal_number.d.ts",
-      "import": "./lib/personal_number.js",
-      "require": "./lib/personal_number.cjs"
+      "import": "./lib/personal_number.mjs",
+      "require": "./lib/personal_number.cjs",
+      "default": "./lib/personal_number.js"
     },
     "./phone_number": {
       "types": "./lib/phone_number.d.ts",
-      "import": "./lib/phone_number.js",
-      "require": "./lib/phone_number.cjs"
+      "import": "./lib/phone_number.mjs",
+      "require": "./lib/phone_number.cjs",
+      "default": "./lib/phone_number.js"
     },
     "./types": {
       "types": "./lib/types.d.ts",
-      "import": "./lib/types.js",
-      "require": "./lib/types.cjs"
+      "import": "./lib/types.mjs",
+      "require": "./lib/types.cjs",
+      "default": "./lib/types.js"
     }
   },
   "keywords": [

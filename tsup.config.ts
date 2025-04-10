@@ -1,11 +1,16 @@
 import { defineConfig, type Options } from "tsup";
 
-export default defineConfig((flags) => {
+export default defineConfig(() => {
   const buildOptions: Options = {
     minify: true,
     clean: true,
     format: ["cjs", "esm"],
     dts: true,
+    outExtension({ format }) {
+      return {
+        js: format === "esm" ? ".mjs" : format === "cjs" ? ".cjs" : ".js",
+      };
+    },
   };
 
   return {
