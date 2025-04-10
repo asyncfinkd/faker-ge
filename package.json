@@ -1,6 +1,6 @@
 {
   "name": "faker-ge",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Generate massive amounts of fake Georgian data",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -33,6 +33,11 @@
       "types": "./lib/personal_number.d.ts",
       "import": "./lib/personal_number.js",
       "require": "./lib/personal_number.cjs"
+    },
+    "./phone_number": {
+      "types": "./lib/phone_number.d.ts",
+      "import": "./lib/phone_number.js",
+      "require": "./lib/phone_number.cjs"
     },
     "./types": {
       "types": "./lib/types.d.ts",

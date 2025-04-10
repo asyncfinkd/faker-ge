@@ -14,6 +14,7 @@ export default defineConfig((flags) => {
       "src/types.ts",
       "src/person.ts",
       "src/personal_number.ts",
+      "src/phone_number.ts",
     ],
     outDir: "lib",
     ...buildOptions,
