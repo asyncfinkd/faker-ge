@@ -1,6 +1,5 @@
+import { Provider } from "../../definitions/phone_number";
 import { ModuleBase } from "../../internal/module-base";
-
-type Provider = "Silknet" | "Magti" | "Geocell" | "Beeline";
 
 const providers: { [key in Provider]: string } = {
   Silknet: "557",
@@ -24,6 +23,11 @@ export class PhoneNumberModule extends ModuleBase {
     );
   }
 
+  /**
+   * Generates a random phone number
+   * @param {Provider} [provider] Optional provider to generate a phone number for
+   * @returns {string} A random phone number
+   */
   phone(provider?: Provider): string {
     return this.generatePhoneNumber(provider);
   }
