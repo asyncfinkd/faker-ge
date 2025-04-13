@@ -10,6 +10,11 @@ export class PersonalNumberModule extends ModuleBase {
     return `${prefixValue}${randomPart}`.substring(0, length);
   }
 
+  /**
+   * Generates a random personal number
+   * @param {string} [prefix] Optional prefix for the personal number
+   * @returns {string} A random personal number
+   */
   pid(prefix?: string): string {
     return this.generateTheId(prefix);
   }
