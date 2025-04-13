@@ -31,7 +31,7 @@ describe("Location Module", () => {
   });
 
   it("should generate a building number", () => {
-    const buildingNumber = faker.location.getBildingNumber();
+    const buildingNumber = faker.location.getBuildingNumber();
     expect(buildingNumber).toBeDefined();
     expect(typeof buildingNumber).toBe("string");
   });
