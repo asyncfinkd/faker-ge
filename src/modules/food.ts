@@ -1,4 +1,4 @@
-import { fruit } from "../data/food";
+import { fruit, ingredients } from "../data/food";
 import { ModuleBase } from "../internal/module-base";
 
 export class FoodModule extends ModuleBase {
@@ -18,5 +18,13 @@ export class FoodModule extends ModuleBase {
    */
   fruit(): string {
     return this.mapTheArray(this.selectDefinition(fruit));
+  }
+
+  /**
+   * Generates a random ingredient
+   * @returns {string} A random ingredient
+   */
+  ingredients(): string {
+    return this.mapTheArray(this.selectDefinition(ingredients));
   }
 }
