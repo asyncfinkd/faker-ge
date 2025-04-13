@@ -40,6 +40,12 @@ const phone = faker.phoneNumber.phone();
 
 // Generate a random Georgian location
 const region = faker.location.getRegion();
+
+// Generate a random Georgian food
+const food = faker.food.fruit();
+
+// Generate a random Georgian vehicle
+const vehicle = faker.vehicle.model();
 ```
 
 ## API Reference
@@ -84,7 +90,7 @@ Generate realistic Georgian personal identification numbers.
 faker.personalNumber.pid(); // e.g., "01234567890"
 
 // Generate a personal ID with a specific prefix
-faker.personalNumber.pid("02"); // e.g., "02345678901"
+faker.personalNumber.pid("61"); // e.g., "61012345678"
 ```
 
 ### Phone Number Module
@@ -115,6 +121,36 @@ faker.location.getCity(); // e.g., "თბილისი"
 
 // Generate a random street
 faker.location.getStreet(); // e.g., "ბაღის ქუჩა"
+```
+
+### Food Module
+
+Generate realistic Georgian food data.
+
+```ts
+// Generate a random food fruit
+faker.food.fruit(); // e.g., "ვაშლი"
+
+// Generate a random food ingredient
+faker.food.ingredients(); // e.g., "ჭარხალი"
+
+// Generate a random food vegetable
+faker.food.vegetable(); // e.g., "პომიდორი"
+```
+
+### Vehicle Module
+
+Generate realistic Georgian vehicle data.
+
+```ts
+// Generate a random vehicle model
+faker.vehicle.model(); // e.g., "მარსმანი"
+
+// Generate a random vehicle fuel
+faker.vehicle.fuel(); // e.g., "ბუნებრივი გაზი"
+
+// Generate a random vehicle color
+faker.vehicle.color(); // e.g., "წითელი"
 ```
 
 # Use Cases
