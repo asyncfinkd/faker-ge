@@ -7,4 +7,10 @@ describe("Vehicle Module", () => {
     expect(model).toBeDefined();
     expect(typeof model).toBe("string");
   });
+
+  it("should generate a random vehicle fuel", () => {
+    const fuel = faker.vehicle.fuel();
+    expect(fuel).toBeDefined();
+    expect(typeof fuel).toBe("string");
+  });
 });
