@@ -1,4 +1,4 @@
-import { fuel, model } from "../../data/vehicle";
+import { color, fuel, model } from "../../data/vehicle";
 import { ModuleBase } from "../../internal/module-base";
 
 export class VehicleModule extends ModuleBase {
@@ -24,5 +24,13 @@ export class VehicleModule extends ModuleBase {
    */
   fuel(): string {
     return this.mapTheArray(this.selectDefinition(fuel));
+  }
+
+  /**
+   * Generates a random vehicle color
+   * @returns {string} A random vehicle color
+   */
+  color(): string {
+    return this.mapTheArray(this.selectDefinition(color));
   }
 }

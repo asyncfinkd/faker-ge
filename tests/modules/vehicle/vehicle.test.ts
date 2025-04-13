@@ -13,4 +13,10 @@ describe("Vehicle Module", () => {
     expect(fuel).toBeDefined();
     expect(typeof fuel).toBe("string");
   });
+
+  it("should generate a random vehicle color", () => {
+    const color = faker.vehicle.color();
+    expect(color).toBeDefined();
+    expect(typeof color).toBe("string");
+  });
 });
