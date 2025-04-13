@@ -13,4 +13,10 @@ describe("Food Module", () => {
     expect(ingredient).toBeDefined();
     expect(typeof ingredient).toBe("string");
   });
+
+  it("should generate a random vegetable", () => {
+    const vegetable = faker.food.vegetable();
+    expect(vegetable).toBeDefined();
+    expect(typeof vegetable).toBe("string");
+  });
 });
